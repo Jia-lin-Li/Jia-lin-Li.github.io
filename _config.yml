@@ -73,9 +73,9 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google" # false (default), "google", "google-universal", "custom"
+  provider               :  "custom" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :  "G-7WWRGCV8XR" # "UA-241687246-1"
+    # tracking_id          :  "G-7WWRGCV8XR" # "UA-241687246-1"
 
 
 # Site Author
@@ -83,7 +83,7 @@ author:
   name             : "Jialin Li"
   avatar           : "selfphoto.png" # "/images/website_photo.jpeg" #
   bio              : "Postdoc Research Fellow at Rotman School of Management, University of Toronto"
-  location         : "Toronto, Canada"
+  location         : "Toronto, ON, Canada"
   employer         :
   pubmed           :
   googlescholar    : #"http://yourfullgooglescholarurl.com"
@@ -182,7 +182,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
     output: true
@@ -273,7 +273,7 @@ plugins:
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
+  # - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
