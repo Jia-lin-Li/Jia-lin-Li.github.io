@@ -13,11 +13,11 @@ permalink: /teaching/
 ## Assistant
 
 * Discussion Session Instructor (UMCP)
-    * MATH240 Linear Algebra
-    * STAT400 Applied Probability and Statistics
-    * MATH241 Calculus III
-    * MATH461 Linear Algebra for Scientists and Engineers
     * MATH141 Calculus II
+    * MATH241 Calculus III
+    * MATH240 Linear Algebra
+    * MATH461 Linear Algebra for Scientists and Engineers
+    * STAT400 Applied Probability and Statistics
 * Grader (UMCP)
     * BMGT838E Stochastic Optimization
     * STAT650 Stochastic Process
