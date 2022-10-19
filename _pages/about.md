@@ -21,7 +21,7 @@ My diverse research is positioned at the interface of applied probability, opera
 ## Papers
 Authors in alphabetical order.
 
-* Jialin Li, and Ilya Ryzhov, “Moderate deviations inequalities for Gaussian process regression.” _Journal of Applied Probability_, Under Second Review.
+* Jialin Li, and Ilya Ryzhov, “Moderate deviations inequalities for Gaussian process regression.” _Journal of Applied Probability_, Minor Revision.
 [link](/files/2022_LiRy_gaussian.pdf){: .btn--link}
 
 * Jialin Li, and Ilya Ryzhov, “Convergence rates of epsilon-greedy global optimization under radial basis function interpolation.” _Stochastic Systems_, Ahead of Print.
