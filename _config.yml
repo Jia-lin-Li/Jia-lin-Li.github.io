@@ -185,7 +185,7 @@ collections:
     output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 
@@ -202,7 +202,7 @@ defaults:
       comments: true
       share: true
       related: true
-      sitemap: false
+      sitemap: true
   # _pages
   - scope:
       path: ""
@@ -210,7 +210,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sitemap: false
+      sitemap: true
   # _teaching
   - scope:
       path: ""
@@ -220,7 +220,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
-      sitemap: false
+      sitemap: true
   # _publications
   - scope:
       path: ""
@@ -230,6 +230,7 @@ defaults:
       author_profile: true
       share: true
       comments: true
+      sitemap: true
   # _portfolio
   - scope:
       path: ""
@@ -239,7 +240,7 @@ defaults:
       author_profile: true
       share: true
       comment: true
-      sitemap: false
+      sitemap: true
   # _talks
   - scope:
       path: ""
@@ -248,7 +249,7 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-      sitemap: false
+      sitemap: true
 
 # Sass/SCSS
 sass:
@@ -266,14 +267,14 @@ timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_ti
 # Plugins
 plugins:
   - jekyll-paginate
-  # - jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
-  # - jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
