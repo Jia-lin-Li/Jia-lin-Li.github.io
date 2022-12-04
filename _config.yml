@@ -182,10 +182,10 @@ collections:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: false
+    output: true
     permalink: /:collection/:path/
   talks:
-    output: false
+    output: true
     permalink: /:collection/:path/
 
 
@@ -202,7 +202,7 @@ defaults:
       comments: true
       share: true
       related: true
-      sitemap: false
+      sitemap: true
   # _pages
   - scope:
       path: ""
@@ -240,7 +240,7 @@ defaults:
       author_profile: true
       share: true
       comment: true
-      sitemap: false
+      sitemap: true
   # _talks
   - scope:
       path: ""
@@ -249,7 +249,7 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-      sitemap: false
+      sitemap: true
 
 # Sass/SCSS
 sass:

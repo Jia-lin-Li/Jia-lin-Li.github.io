@@ -1,14 +1,13 @@
 ---
 permalink: /
 title: "About me"
-excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a Postdoc Research Fellow in the area of [Operations Management and Statistics](https://www.rotman.utoronto.ca/FacultyAndResearch/AcademicAreas/OperationsManagement/OM_Faculty) at the [Joseph L. Rotman School of Management](https://www.rotman.utoronto.ca/), [University of Toronto](https://www.utoronto.ca/). I received my PhD in applied math ([AMSC](https://amsc.umd.edu/) program) from the [University of Maryland, College Park](https://www.umd.edu/).
+I am a Postdoc Research Fellow in the area of [Operations Management and Statistics](https://www.rotman.utoronto.ca/FacultyAndResearch/AcademicAreas/OperationsManagement/OM_Faculty) at the [Joseph L. Rotman School of Management](https://www.rotman.utoronto.ca/), [University of Toronto](https://www.utoronto.ca/). I received my PhD in applied math ([AMSC](https://amsc.umd.edu/) program) from the [University of Maryland, College Park](https://www.umd.edu/). I have been advised by Professor [Ilya Ryzhov](https://sites.google.com/umd.edu/iryzhov/home) and I am now working with Professor [Ningyuan Chen](http://individual.utoronto.ca/ningyuanchen/), Professor [Ming Hu](http://individual.utoronto.ca/minghu/) and Professor [Sheng Liu](https://sites.google.com/site/thushengliu/). 
 
 My diverse research is positioned at the interface of applied probability, operations research, statistical learning and stochastic modeling. I have primarily focused on the fundamental theory of global optimization and tensor decomposition algorithms. Since I explored more applied topics during my postdoc, now my interests also encompass business problems like data-driven revenue management. 
 
