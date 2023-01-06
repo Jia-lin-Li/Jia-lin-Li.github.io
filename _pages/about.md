@@ -13,7 +13,7 @@ My diverse research is positioned at the interface of applied probability, opera
 
 ## Working Papers
 
-* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Incentivizing Myopic Customers to Explore.” Work in progress.
+* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Incentivizing Greedy Customers to Explore.” Work in progress.
 * Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Pricing Under Privacy Protection.” Manuscript (not camera-ready) available upon request. 
 
 
