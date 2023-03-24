@@ -14,7 +14,7 @@ My diverse research is positioned at the interface of applied probability, opera
 ## Working Papers
 
 * Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Incentivizing Greedy Customers to Explore.” Work in progress.
-* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Pricing Under Privacy Protection.” Manuscript (not camera-ready) available upon request. 
+* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Pricing Under Privacy Protection.” Manuscript to be submitted to Management Science. 
 
 
 ## Papers
@@ -23,7 +23,7 @@ Authors in alphabetical order.
 * Jialin Li, and Ilya Ryzhov, “Moderate deviations inequalities for Gaussian process regression.” _Journal of Applied Probability_, Minor Revision.
 [link](/files/2022_LiRy_gaussian.pdf){: .btn--link}
 
-* Jialin Li, and Ilya Ryzhov, “Convergence rates of epsilon-greedy global optimization under radial basis function interpolation.” _Stochastic Systems_, Ahead of Print.
+* Jialin Li, and Ilya Ryzhov, “Convergence rates of epsilon-greedy global optimization under radial basis function interpolation.” _Stochastic Systems_ 13(1): 59-92.
 [link](https://doi.org/10.1287/stsy.2022.0096){: .btn--link}
 
 * Furong Huang, Jialin Li, and Xuchen You, “Guaranteed simultaneous asymmetric tensor decomposition via alternating subspace iteration.” Available on _arXiv_.
