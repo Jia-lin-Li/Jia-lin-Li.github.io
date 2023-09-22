@@ -11,32 +11,29 @@ I am a Postdoc Research Fellow in the area of [Operations Management and Statist
 
 My research interest broadly lies in (i) understanding unexpected market outcomes narrated with estimation and inference involving insufficient observational data, and (ii) developing methodologies for better decision-making under uncertainty through improved data utilization, with both topics covering applications with the theme of societal good such as problems in privacy and medical experimental design. Technically, my research is positioned at the interface of stochastic modeling, statistical learning, and applied probability.
 
-** I am on the 2022-2023 job market.**
+**I am on the 2022-2023 job market.**
+ {: .notice}I am on the 2022-2023 job market.
 
 
 ## Publications
 Authors in alphabetical order.
 
-* Jialin Li, and Ilya Ryzhov, “Moderate deviations inequalities for Gaussian process regression.” _Journal of Applied Probability_, Accepted.
-[link](https://doi.org/10.1017/jpr.2023.30){: .btn--link}
+* Jialin Li, and Ilya Ryzhov, “Moderate deviations inequalities for Gaussian process regression.” _Journal of Applied Probability_, Accepted. [link](https://doi.org/10.1017/jpr.2023.30){: .btn--link}
 
-* Jialin Li, and Ilya Ryzhov, “Convergence rates of epsilon-greedy global optimization under radial basis function interpolation.” _Stochastic Systems_ 13(1): 59-92.
-[link](https://doi.org/10.1287/stsy.2022.0096){: .btn--link}
+* Jialin Li, and Ilya Ryzhov, “Convergence rates of epsilon-greedy global optimization under radial basis function interpolation.” _Stochastic Systems_ 13(1): 59-92. [link](https://doi.org/10.1287/stsy.2022.0096){: .btn--link} 
     * Supported by Graduate Student Summer Research Fellowship (5000USD), University of Maryland, 2019
 
 
 ## Working Papers
 
-* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data Privacy in Pricing: Estimation Bias and Implications.” Available on SSRN and to be submitted to Management Science. 
-[link](https://ssrn.com/abstract=4488404){: .btn--link}
+* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data Privacy in Pricing: Estimation Bias and Implications.” Available on SSRN and to be submitted to Management Science.  [link](https://ssrn.com/abstract=4488404){: .btn--link}
     * Supported by TD-MDAL Research Grant (4000CAD), Rotman School of Management, 2023
     * Supported by New Pilot Postdoc Funding (2000CAD), Rotman School of Management, 2022
 
 
 ## Work in Progress
 
-* Furong Huang, Jialin Li, and Xuchen You, “Guaranteed simultaneous asymmetric tensor decomposition via alternating subspace iteration.” Available on _arXiv_.
-[link](https://arxiv.org/abs/1805.10348){: .btn--link}
+* Furong Huang, Jialin Li, and Xuchen You, “Guaranteed simultaneous asymmetric tensor decomposition via alternating subspace iteration.” Available on _arXiv_. [link](https://arxiv.org/abs/1805.10348){: .btn--link}
 
 * Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Incentivizing Greedy Customers to Explore.”
 
