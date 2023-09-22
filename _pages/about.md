@@ -7,21 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a Postdoc Research Fellow in the area of [Operations Management and Statistics](https://www.rotman.utoronto.ca/FacultyAndResearch/AcademicAreas/OperationsManagement/OM_Faculty) at the [Joseph L. Rotman School of Management](https://www.rotman.utoronto.ca/), [University of Toronto](https://www.utoronto.ca/). I received my PhD in applied math ([AMSC](https://amsc.umd.edu/) program) from the [University of Maryland, College Park](https://www.umd.edu/). I have been advised by Professor [Ilya Ryzhov](https://sites.google.com/umd.edu/iryzhov/home) and I am now working with Professor [Ningyuan Chen](http://individual.utoronto.ca/ningyuanchen/), Professor [Ming Hu](http://individual.utoronto.ca/minghu/) and Professor [Sheng Liu](https://sites.google.com/site/thushengliu/). 
+I am a Postdoc Research Fellow in the area of [Operations Management and Statistics](https://www.rotman.utoronto.ca/FacultyAndResearch/AcademicAreas/OperationsManagement/OM_Faculty) at the Joseph L. Rotman School of Management, University of Toronto, under the supervision of [Ningyuan Chen](http://individual.utoronto.ca/ningyuanchen/), [Ming Hu](http://individual.utoronto.ca/minghu/) and [Sheng Liu](https://sites.google.com/site/thushengliu/). I received my PhD in applied math ([AMSC](https://amsc.umd.edu/) program) from the University of Maryland, College Park. I was fortunate to be advised by Professor [Ilya Ryzhov](https://sites.google.com/umd.edu/iryzhov/home). 
 
-My diverse research is positioned at the interface of applied probability, operations research, statistical learning and stochastic modeling. I have primarily focused on the fundamental theory of handling simulation data and experimental designs in black-box optimization as well as decomposing large datasets in tensor format. Since I explored more applied topics during my postdoc, now my interests also encompass business problems like data-driven revenue management. 
+My research interest broadly lies in (i) understanding unexpected market outcomes narrated with estimation and inference involving insufficient observational data, and (ii) developing methodologies for better decision-making under uncertainty through improved data utilization, with both topics covering applications with the theme of societal good such as problems in privacy and medical experimental design. Technically, my research is positioned at the interface of stochastic modeling, statistical learning, and applied probability.
 
-## Working Papers
-
-
-* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data Privacy in Pricing: Estimation Bias and Implications.” Available on SSRN and to be submitted to Management Science. 
-[link](https://ssrn.com/abstract=4488404){: .btn--link}
-
-* Furong Huang, Jialin Li, and Xuchen You, “Guaranteed simultaneous asymmetric tensor decomposition via alternating subspace iteration.” Available on _arXiv_ and to be submitted.
-[link](https://arxiv.org/abs/1805.10348){: .btn--link}
-
-* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Incentivizing Greedy Customers to Explore.” Work in progress.
-
+** I am on the 2022-2023 job market.**
 
 
 ## Publications
@@ -32,3 +22,24 @@ Authors in alphabetical order.
 
 * Jialin Li, and Ilya Ryzhov, “Convergence rates of epsilon-greedy global optimization under radial basis function interpolation.” _Stochastic Systems_ 13(1): 59-92.
 [link](https://doi.org/10.1287/stsy.2022.0096){: .btn--link}
+    * Supported by Graduate Student Summer Research Fellowship (5000USD), University of Maryland, 2019
+
+
+## Working Papers
+
+* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data Privacy in Pricing: Estimation Bias and Implications.” Available on SSRN and to be submitted to Management Science. 
+[link](https://ssrn.com/abstract=4488404){: .btn--link}
+    * Supported by TD-MDAL Research Grant (4000CAD), Rotman School of Management, 2023
+    * Supported by New Pilot Postdoc Funding (2000CAD), Rotman School of Management, 2022
+
+
+## Work in Progress
+
+* Furong Huang, Jialin Li, and Xuchen You, “Guaranteed simultaneous asymmetric tensor decomposition via alternating subspace iteration.” Available on _arXiv_.
+[link](https://arxiv.org/abs/1805.10348){: .btn--link}
+
+* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Incentivizing Greedy Customers to Explore.”
+
+
+
+

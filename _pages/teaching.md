@@ -5,20 +5,21 @@ permalink: /teaching/
 
 {% include base_path %}
 
-## Lecturer
+## Instructor, University of Maryland, College Park
 
-* [MATH107](https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/639-math-107-introduction-to-math-modeling-and-probability.html) Introduction to Math Modeling and Probability, UMCP, Spring 2017
+* [MATH107](https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/639-math-107-introduction-to-math-modeling-and-probability.html) Introduction to Math Modeling and Probability, Spring 2017
 
 
-## Assistant
+## Teaching Assistant, University of Maryland, College Park
 
-* Discussion Session Instructor (UMCP)
-    * MATH141 Calculus II
-    * MATH241 Calculus III
-    * MATH240 Linear Algebra
-    * MATH461 Linear Algebra for Scientists and Engineers
-    * STAT400 Applied Probability and Statistics
-* Grader (UMCP)
-    * BMGT838E Stochastic Optimization
-    * STAT650 Stochastic Process
-    * STAT741 Linear Model
+* Undergraduate Course Co-Instructor 
+  Duty: To give lectures, lead discussions, and answer quetions in complementary sessions
+    * MATH141 Calculus II (Fall 2017)
+    * MATH241 Calculus III (Fall 2018)
+    * MATH240 Linear Algebra (Spring 2021)
+    * MATH461 Linear Algebra for Scientists and Engineers (Spring 2018, Fall 2019)
+    * STAT400 Applied Probability and Statistics (Spring \& Fall 2020)
+* PhD Course Grader
+    * BMGT838E Stochastic Optimization (Spring 2020)
+    * STAT650 Stochastic Process (Spring 2019)
+    * STAT741 Linear Model (Spring 2019)
