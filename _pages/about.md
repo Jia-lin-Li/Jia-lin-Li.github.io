@@ -12,8 +12,6 @@ I am a Postdoc Research Fellow in the area of [Operations Management and Statist
 My research interest broadly lies in (i) understanding unexpected market outcomes narrated with estimation and inference involving insufficient observational data, and (ii) developing methodologies for better decision-making under uncertainty through improved data utilization, with both topics covering applications with the theme of societal good such as problems in privacy and medical experimental design. Technically, my research is positioned at the interface of stochastic modeling, statistical learning, and applied probability.
 
 **I am on the 2022-2023 job market.**
- {: .notice}I am on the 2022-2023 job market.
-
 
 ## Publications
 Authors in alphabetical order.
