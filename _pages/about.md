@@ -19,7 +19,7 @@ Authors in alphabetical order.
     * Supported by Graduate Student Summer Research Fellowship (5000USD), University of Maryland, 2019
 
 ## Working Papers
-* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data privacy in pricing: Estimation bias and implications.” To be soon submitted.  [link](https://ssrn.com/abstract=4488404){: .btn--link}
+* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data privacy in pricing: Estimation bias and implications.” Submitted to _Manufacturing & Service Operations Management_.  [link](https://ssrn.com/abstract=4488404){: .btn--link}
     * Supported by TD Management Data and Analytics Lab Research Grant (4000CAD), Rotman School of Management, 2023
     * Supported by New Pilot Postdoc Funding (2000CAD), Rotman School of Management, 2022
 
