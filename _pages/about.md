@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a Postdoc Research Fellow in the area of [Operations Management and Statistics](https://www.rotman.utoronto.ca/FacultyAndResearch/AcademicAreas/OperationsManagement/OM_Faculty) at the Joseph L. Rotman School of Management, University of Toronto, under the supervision of [Ningyuan Chen](http://individual.utoronto.ca/ningyuanchen/), [Ming Hu](http://individual.utoronto.ca/minghu/) and [Sheng Liu](https://sites.google.com/site/thushengliu/). I received my PhD in applied math ([AMSC](https://amsc.umd.edu/) program) from the University of Maryland, College Park. I was fortunate to be advised by [Ilya Ryzhov](https://sites.google.com/umd.edu/iryzhov/home). 
+I am a Visiting Assistant Professor at the Department of Mathematics and Statistics, University of Massachusetts, Amherst.   Previously I was a Postdoc Research Fellow in the area of [Operations Management and Statistics](https://www.rotman.utoronto.ca/FacultyAndResearch/AcademicAreas/OperationsManagement/OM_Faculty) at the Joseph L. Rotman School of Management, University of Toronto, under the supervision of [Ningyuan Chen](http://individual.utoronto.ca/ningyuanchen/), [Ming Hu](http://individual.utoronto.ca/minghu/) and [Sheng Liu](https://sites.google.com/site/thushengliu/). I received my PhD in applied math ([AMSC](https://amsc.umd.edu/) program) from the University of Maryland, College Park. I was fortunate to be advised by [Ilya Ryzhov](https://sites.google.com/umd.edu/iryzhov/home). 
 
-My research interest broadly lies in (i) understanding unexpected outcomes narrated with estimation and inference involving (insufficient) observational data, and (ii) developing methodologies for better decision-making under uncertainty through improved data utilization, with both topics covering applications with the theme of societal good such as problems in privacy and experimental design. Technically, my research is positioned at the interface of stochastic modeling and uncertainty quantification.
+My research focuses on developing methodologies for better decision-making under uncertainty. I seek methods that are both effective and user-friendly, and I am interested in scenarios where intuitive methods might lead to unintended negative outcomes. I am motivated by applications that have a positive societal impact. Technically, my interests include stochastic optimization, uncertainty quantification, and statistical learning.
 
 
 ## Publications
@@ -25,7 +25,6 @@ Authors in alphabetical order.
 
 ## Work in Progress
 * Furong Huang, Jialin Li, and Xuchen You, “Guaranteed simultaneous asymmetric tensor decomposition via alternating subspace iteration.” To be submitted. [link](https://arxiv.org/abs/1805.10348){: .btn--link}
-* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Incentivizing greedy customers to explore.”
 
 
 

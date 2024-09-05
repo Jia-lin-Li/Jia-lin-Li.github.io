@@ -5,9 +5,14 @@ permalink: /teaching/
 
 {% include base_path %}
 
+## Instructor, University of Massachusetts, Amherst
+
+* STAT315 Statistics I (Fall 2024) [Section 1](https://www.umass.edu/natural-sciences/class/34558/statistics-i), [Section 2](https://www.umass.edu/natural-sciences/class/34559/statistics-i). 
+    * [Syllabus](/files/S315_Fall24_Syllabus_JL.pdf)
+
 ## Instructor, University of Maryland, College Park
 
-* [MATH107](https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/639-math-107-introduction-to-math-modeling-and-probability.html) Introduction to Math Modeling and Probability (Spring 2017)
+*[MATH107](https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/639-math-107-introduction-to-math-modeling-and-probability.html) Introduction to Math Modeling and Probability (Spring 2017)
 
 
 ## Teaching Assistant, University of Maryland, College Park
