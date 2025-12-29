@@ -21,6 +21,7 @@ Authors in alphabetical order.
 
 ## Working Papers
 * Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data privacy in pricing: Estimation bias and implications.” Major Revision submitted, _Manufacturing & Service Operations Management_.  [link](https://ssrn.com/abstract=4488404){: .btn--link}
+    * For visitors interested in a high-level, non-technical overview of this research, I provide a short explanatory video [here](https://drive.google.com/file/d/1L9Skr6fDpo2EIETm7sU0_ZDD0IDqMuds/view?usp=sharing){: .btn--link}.
     * Supported by TD Management Data and Analytics Lab Research Grant, Rotman School of Management, 2023
     * Supported by New Pilot Postdoc Funding, Rotman School of Management, 2022
 
