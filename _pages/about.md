@@ -7,9 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a Visiting Assistant Professor at the Department of Mathematics and Statistics, University of Massachusetts, Amherst. Previously I was a Postdoc Research Fellow in the area of Operations Management and Statistics at the Joseph L. Rotman School of Management, University of Toronto, under the supervision of [Ningyuan Chen](http://individual.utoronto.ca/ningyuanchen/), [Ming Hu](http://individual.utoronto.ca/minghu/) and [Sheng Liu](https://sites.google.com/site/thushengliu/). I received my PhD in applied math ([AMSC](https://amsc.umd.edu/)) from the University of Maryland, College Park. I was fortunate to be advised by [Ilya Ryzhov](https://sites.google.com/umd.edu/iryzhov/home). 
+I am a Visiting Assistant Professor at the Department of Mathematics and Statistics, University of Massachusetts Amherst. Previously I was a Postdoc Research Fellow in the area of Operations Management and Statistics at the Joseph L. Rotman School of Management, University of Toronto, under the supervision of [Ningyuan Chen](http://individual.utoronto.ca/ningyuanchen/), [Ming Hu](http://individual.utoronto.ca/minghu/) and [Sheng Liu](https://sites.google.com/site/thushengliu/). I received my PhD in applied math ([AMSC](https://amsc.umd.edu/)) from the University of Maryland, College Park. I was fortunate to be advised by [Ilya Ryzhov](https://sites.google.com/umd.edu/iryzhov/home). 
 
-My research focuses on stochastic black-box models, uncertainty modeling and quantification, and statistical learning. I look for new perspectives at the intersection of statistics and operations research. 
+My research focuses on stochastic black-box models and uncertainty quantification. I look for new perspectives at the intersection of statistics and operations research. 
 
 
 ## Publications
@@ -20,8 +20,10 @@ Authors in alphabetical order.
     * Supported by Graduate Student Summer Research Fellowship, University of Maryland, 2019
 
 ## Working Papers
+* Jialin Li, Zihao Qu, Mengfan Xu, “Dynamic Balancing and Matchmaking in Competitive Live-Service Games.” [link](https://papers.ssrn.com/abstract=6631358){: .btn--link}
+    * A short video explaining the key ideas of this paper can be found [here](https://drive.google.com/file/d/1D5VhbXf3nOQMlPWy66hn8IKWR9pcekms/view?usp=sharing){: .btn--link}
 * Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data privacy in pricing: Estimation bias and implications.” Under Minor Revision, _Manufacturing & Service Operations Management_.  [link](https://ssrn.com/abstract=4488404){: .btn--link}
-    * For visitors interested in a high-level, non-technical overview of this research, I provide a short explanatory video [here](https://drive.google.com/file/d/1L9Skr6fDpo2EIETm7sU0_ZDD0IDqMuds/view?usp=sharing){: .btn--link}.
+    * For visitors interested in a high-level, non-technical overview of this research, a short explanatory video can be found [here](https://drive.google.com/file/d/1L9Skr6fDpo2EIETm7sU0_ZDD0IDqMuds/view?usp=sharing){: .btn--link}.
     * Supported by TD Management Data and Analytics Lab Research Grant, Rotman School of Management, 2023
     * Supported by New Pilot Postdoc Funding, Rotman School of Management, 2022
 
