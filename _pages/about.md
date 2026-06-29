@@ -21,11 +21,12 @@ Authors in alphabetical order.
 
 ## Working Papers
 * Jialin Li, Zihao Qu, Mengfan Xu, “Dynamic Balancing and Matchmaking in Competitive Live-Service Games.” [link](https://papers.ssrn.com/abstract=6631358){: .btn--link}
-    * A short video explaining the key ideas of this paper can be found [here](https://drive.google.com/file/d/1D5VhbXf3nOQMlPWy66hn8IKWR9pcekms/view?usp=sharing){: .btn--link}
+    * A short explanatory video can be found [here](https://drive.google.com/file/d/1D5VhbXf3nOQMlPWy66hn8IKWR9pcekms/view?usp=sharing){: .btn--link} for the key ideas of this paper.
 * Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data privacy in pricing: Estimation bias and implications.” Under Minor Revision, _Manufacturing & Service Operations Management_.  [link](https://ssrn.com/abstract=4488404){: .btn--link}
-    * For visitors interested in a high-level, non-technical overview of this research, a short explanatory video can be found [here](https://drive.google.com/file/d/1L9Skr6fDpo2EIETm7sU0_ZDD0IDqMuds/view?usp=sharing){: .btn--link}.
+    * A short explanatory video can be found [here](https://drive.google.com/file/d/1L9Skr6fDpo2EIETm7sU0_ZDD0IDqMuds/view?usp=sharing){: .btn--link} for a high-level, non-technical overview.
+    * MSOM SIG Presentation 2026
     * Supported by TD Management Data and Analytics Lab Research Grant, Rotman School of Management, 2023
-    * Supported by New Pilot Postdoc Funding, Rotman School of Management, 2022
+    
 
 ## Work in Progress
 * Furong Huang, Jialin Li, and Xuchen You, “Guaranteed simultaneous asymmetric tensor decomposition via alternating subspace iteration.” To be submitted in a finite period of time. [link](https://arxiv.org/abs/1805.10348){: .btn--link}
