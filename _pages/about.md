@@ -27,7 +27,7 @@ Authors in alphabetical order.
     
 
 ## Work in Progress
-* Coming up next: :baby_chick: 
+* Coming up next: 🐔!
 * Furong Huang, Jialin Li, and Xuchen You, “Guaranteed simultaneous asymmetric tensor decomposition via alternating subspace iteration.” To be submitted within a finite period of time. [link](https://arxiv.org/abs/1805.10348){: .btn--link}
 
 
