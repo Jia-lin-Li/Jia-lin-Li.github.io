@@ -3,7 +3,7 @@ title: "Teaching Experience"
 permalink: /teaching/
 ---
 
-{% include base_path %}
+
 
 ## Instructor, University of Massachusetts, Amherst
 

@@ -1,31 +1,127 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# Jialin Li's academic website
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+Source for [jia-lin-li.github.io](https://jia-lin-li.github.io/), built with
+Jekyll and hosted on GitHub Pages. The site uses the AcademicPages / Minimal
+Mistakes theme.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+## Where to edit
 
-# Instructions
+| Content | File |
+| --- | --- |
+| Biography, publications, and working papers | `_pages/about.md` |
+| Teaching experience | `_pages/teaching.md` |
+| CV and resume redirects | `_pages/cv.md`, `_pages/resume.md` |
+| Privacy notice | `_pages/terms.md` |
+| Downloadable CV | `files/CV_JialinLi.pdf` |
+| Teaching syllabus | `files/S315_Fall24_Syllabus_JL.pdf` |
+| Navigation links | `_data/navigation.yml` |
+| Name, contact details, portrait, and metadata | `_config.yml` |
+| Portrait, browser icon, and social preview image | `images/selfphoto.png` |
+| Search and sharing metadata markup | `_includes/seo.html` |
+| Browser icons and extra head markup | `_includes/head.html` |
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+The homepage's `seo_title` and `og_description` are configured in its scoped
+`defaults` entry in `_config.yml`. These control browser/search and sharing
+metadata independently of the visible “About me” heading. The site title remains
+“Jialin Li” in the navigation. Page content and research links live in Markdown;
+there is no separate publications database or generator.
 
-See more info at https://academicpages.github.io/
+## Local preview
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+With Ruby and Bundler installed, use the project launcher:
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change. (Personal remark by JL: run `bundle exec jekyll serve` .)
+```sh
+bash scripts/bundle.sh install
+bash scripts/bundle.sh exec jekyll serve --config _config.yml,_config.dev.yml
+```
 
-# Changelog -- bugfixes and enhancements
+Open <http://localhost:4000>. The development configuration uses local URLs,
+disables analytics, and expands CSS. Restart Jekyll after configuration changes.
+Keep `Gemfile.lock` so dependency versions are reproducible.
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+The launcher uses the locked gems in ignored `vendor/bundle/`. On this Mac it
+runs the existing universal system Ruby in Intel mode to match the existing
+Homebrew OpenSSL library, and supplies the Command Line Tools C++ header path
+when compiling native gems. Other Ruby installations use their selected runtime.
+It runs Bundler normally, including dependency checks; it does not install a new
+Ruby, modify system gems, or use `JEKYLL_NO_BUNDLER_REQUIRE`.
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+After a macOS or toolchain update, reinstall native extensions if needed:
+
+```sh
+bash scripts/bundle.sh pristine
+```
+
+## Build and check
+
+```sh
+bash scripts/bundle.sh exec jekyll build --safe
+python3 scripts/check_site.py _site
+```
+
+`check_site.py` uses only the Python 3 standard library. It checks generated HTML,
+CSS assets, manifest icons, homepage metadata, redirect targets, and indexing
+rules. It accepts only the intended public files and XML sitemap entries, so
+retired template pages cannot accidentally return. It checks local file destinations;
+external websites and fragment anchors are outside its scope.
+
+The “Check website” GitHub Actions workflow runs the official GitHub Pages Jekyll
+build action and these checks on pushes and pull requests. It validates the site;
+it does not deploy it or change the repository's Pages publishing settings.
+
+## Videos and mathematics
+
+Overview videos use the same outlined button style as paper links and sit next
+to the corresponding paper in `_pages/about.md`. Preserve the existing video URLs
+when updating titles or citation details.
+
+MathJax loads only on pages whose YAML front matter contains `math: true`:
+
+```yaml
+---
+title: "A page with equations"
+math: true
+---
+```
+
+The current pages contain no equations, so they make no MathJax requests. The
+optional loader uses the pinned MathJax 2.7.9 release, which supports Jekyll's
+Kramdown math markup, inline `$...$` / `\(...\)`, and display equations. See the
+[MathJax documentation](https://docs.mathjax.org/en/v2.7-latest/start.html).
+
+## Public pages and indexing
+
+The public academic pages are `/` and `/teaching/`, plus the CV and syllabus PDFs.
+`/about/` and `/about.html` redirect to the homepage; `/cv/` and `/resume` redirect
+directly to the CV PDF. GitHub Pages implements these as HTML redirects, not HTTP
+301 responses.
+
+`/404.html` provides the missing-page fallback, and `/terms/` contains the short
+privacy notice. Both have `noindex` metadata and are excluded from the XML sitemap.
+The old HTML sitemap, empty blog feed, and template examples are no longer built.
+Crawlers must still be allowed to visit utility URLs to read their `noindex` tags.
+
+New pages default to `noindex` and are excluded from the XML sitemap. When adding
+an academic page, explicitly set `noindex: false` and `sitemap: true`, and update
+the intended-file and sitemap lists in `scripts/check_site.py`. Search results
+update after crawlers revisit the deployed site; a local build does not update
+Google's index.
+
+## Repository conventions
+
+- `_site/` and `vendor/bundle/` are local generated files, ignored by Git.
+- `_layouts/` and `_includes/` contain only the current page shell, metadata,
+  contact profile, navigation, privacy link, analytics, and optional MathJax.
+- `assets/js/main.js` contains the Contact and responsive-navigation behavior.
+  It is used directly: no jQuery, npm dependencies, or JavaScript build step.
+- `_includes/icon.html` contains the three inline SVG icons. There are no icon
+  font downloads. Attribution is retained in `THIRD_PARTY_NOTICES.md`.
+- `_sass/` keeps the active responsive theme styles and their Susy/Breakpoint
+  dependencies. These dependencies should not be deleted without replacing the
+  layout rules that call them.
+- The site supplies its own theme files. `theme: null` prevents GitHub Pages
+  from injecting the unrelated Primer stylesheet.
+- Production analytics is configured in `_config.yml`; the development config
+  disables it. The 404 and privacy pages also disable analytics.
+- Removed template material remains in Git history. The original theme license
+  is retained in `LICENSE`.

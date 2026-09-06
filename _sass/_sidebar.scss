@@ -84,6 +84,7 @@
 
   img {
     max-width: 175px;
+    height: auto;
     border-radius: 50%;
 
     @include breakpoint($large) {
@@ -172,6 +173,10 @@
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
 
+  &.is-open {
+    display: block;
+  }
+
   @include breakpoint($large) {
     display: block;
     position: relative;
@@ -234,4 +239,10 @@
       text-decoration: underline;
     }
   }
+}
+
+/* Contact links remain available when JavaScript is disabled. */
+.no-js .author__urls-wrapper {
+  button { display: none; }
+  .author__urls { display: block; position: static; }
 }

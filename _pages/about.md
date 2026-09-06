@@ -15,14 +15,12 @@ My research focuses on stochastic black-box models and uncertainty quantificatio
 ## Publications
 Authors in alphabetical order.
 * Jialin Li, and Ilya Ryzhov, “Moderate deviations inequalities for Gaussian process regression.” _Journal of Applied Probability_ 61(1): 172-197. [link](https://doi.org/10.1017/jpr.2023.30){: .btn--link}
-    * This paper has been selected for inclusion in the February 2025 [Applied Probability Collection](https://www.cambridge.org/core/journals/journal-of-applied-probability/collections) on the topic of Gaussian processes. [This collection](https://www.cambridge.org/core/journals/journal-of-applied-probability/collections/february-2025-gaussian-processes) features ten notable articles published by the Applied Probability Trust, showcasing cutting-edge developments in the field. I am grateful for this recognition.
+    * This paper has been selected for inclusion in the February 2025 Applied Probability Collection on the topic of Gaussian processes. [This collection](https://www.cambridge.org/core/journals/journal-of-applied-probability/collections/february-2025-gaussian-processes) features ten notable articles published by the Applied Probability Trust, showcasing cutting-edge developments in the field. I am grateful for this recognition.
 * Jialin Li, and Ilya Ryzhov, “Convergence rates of epsilon-greedy global optimization under radial basis function interpolation.” _Stochastic Systems_ 13(1): 59-92. [link](https://doi.org/10.1287/stsy.2022.0096){: .btn--link}
 
 ## Working Papers
-* Jialin Li, Zihao Qu, Mengfan Xu, “Dynamic Balancing and Matchmaking in Competitive Live-Service Games.” Major Revision, _Management Science_. [link](https://papers.ssrn.com/abstract=6631358){: .btn--link}
-    * A short explanatory video can be found [here](https://drive.google.com/file/d/1D5VhbXf3nOQMlPWy66hn8IKWR9pcekms/view?usp=sharing){: .btn--link} for the key ideas of this paper.
-* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data privacy in pricing: Estimation bias and implications.” Resubmitted after Minor Revision, _Manufacturing & Service Operations Management_.  [link](https://ssrn.com/abstract=4488404){: .btn--link}
-    * A short explanatory video can be found [here](https://drive.google.com/file/d/1L9Skr6fDpo2EIETm7sU0_ZDD0IDqMuds/view?usp=sharing){: .btn--link} for a high-level, non-technical overview.
+* Jialin Li, Zihao Qu, Mengfan Xu, “Dynamic Balancing and Matchmaking in Competitive Live-Service Games.” Major Revision, _Management Science_. [link](https://papers.ssrn.com/abstract=6631358){: .btn--link} [overview video](https://drive.google.com/file/d/1D5VhbXf3nOQMlPWy66hn8IKWR9pcekms/view?usp=sharing){: .btn--link}
+* Ningyuan Chen, Ming Hu, Jialin Li, and Sheng Liu, “Data privacy in pricing: Estimation bias and implications.” Resubmitted after Minor Revision, _Manufacturing & Service Operations Management_.  [link](https://ssrn.com/abstract=4488404){: .btn--link} [overview video](https://drive.google.com/file/d/1L9Skr6fDpo2EIETm7sU0_ZDD0IDqMuds/view?usp=sharing){: .btn--link}
     * MSOM iFORM SIG Day Presentation 2026 (iFORM = the Interface of Finance, Operations and Risk Management; SIG = Special Interest Group)
     
 
