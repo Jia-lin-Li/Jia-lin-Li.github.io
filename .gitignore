@@ -12,3 +12,7 @@ __pycache__/
 *.swp
 *.swo
 *~
+
+_site-preview/
+_production-site/
+backups/

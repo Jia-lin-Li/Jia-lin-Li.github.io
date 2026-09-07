@@ -119,6 +119,16 @@ def check_site(root):
     if homepage.title != "Jialin Li - Uncertainty Quantification":
         errors.append("The requested homepage title has changed.")
 
+    for name in ("index.html", "teaching/index.html", "404.html", "terms/index.html"):
+        output = (root / name).read_text(encoding="utf-8")
+        tracked = "googletagmanager.com/gtag/js?id=G-7WWRGCV8XR" in output
+        if tracked != (name in ("index.html", "teaching/index.html")):
+            errors.append("Incorrect analytics behavior: {}".format(name))
+        if 'rel="apple-touch-icon"' not in output or 'rel="icon"' not in output:
+            errors.append("Browser or Apple touch icon missing: {}".format(name))
+        if '127.0.0.1' in output or 'localhost' in output:
+            errors.append("Local preview URL in production page: {}".format(name))
+
     # Explicit publication list: new files must not quietly become public pages.
     academic_pages = {"index.html", "teaching/index.html"}
     utility_pages = {"404.html", "terms/index.html"}
@@ -129,7 +139,7 @@ def check_site(root):
         "resume.html": "/files/CV_JialinLi.pdf",
     }
     expected_files = academic_pages | utility_pages | set(redirects) | {
-        "assets/css/main.css", "assets/js/main.js", "images/selfphoto.png",
+        "assets/css/editorial.css", "images/selfphoto.png",
         "images/manifest.json", "files/CV_JialinLi.pdf",
         "files/S315_Fall24_Syllabus_JL.pdf", "sitemap.xml", "robots.txt",
     }

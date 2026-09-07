@@ -1,6 +1,6 @@
-# Local preview: local URLs, readable CSS, and no analytics requests.
-url: http://localhost:4000
+# Development stays private to this computer and does not send analytics.
+url: http://127.0.0.1:4173
+public_site: false
 analytics:
   enabled: false
-sass:
-  style: expanded
+plugins: [jekyll-redirect-from]

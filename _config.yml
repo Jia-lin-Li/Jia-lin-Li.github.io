@@ -1,109 +1,67 @@
-# Site identity and search/sharing metadata.
-locale: "en-US"
-title: "Jialin Li"
-title_separator: "-"
-name: "Jialin Li"
-description: "Jialin Li studies stochastic black-box models and uncertainty quantification at the intersection of statistics and operations research. Explore publications and teaching."
+title: Jialin Li
+name: Jialin Li
+description: "Jialin Li studies stochastic black-box models and uncertainty quantification seeking new perspectives, new frameworks, and new models at the intersection of statistics and operations. Explore papers and teaching."
 url: https://Jia-lin-Li.github.io
 baseurl: ""
-repository: "Jia-lin-Li/Jia-lin-Li.github.io"
-og_image: "selfphoto.png"
-# Preserve both existing Search Console ownership tokens.
+theme: null
+public_site: true
+author:
+  title: Visiting Assistant Professor
+  department: Department of Mathematics and Statistics
+  university: University of Massachusetts Amherst
+  email: jialinl@umass.edu
+analytics:
+  enabled: true
+  measurement_id: G-7WWRGCV8XR
 google_site_verifications:
   - KiNHMQt1qvf1p9prv77wkIoYZsF7lMhvF6QOLNDtfHs
   - EoqR7u1VKcu0qPKFdBQBP1EC_sGPk5DDn303EG0KNsQ
-
-author:
-  name: "Jialin Li"
-  avatar: "selfphoto.png"
-  bio: "Visiting Assistant Professor at the Department of Math and Stat, UMass Amherst"
-  location: "Amherst, MA, USA"
-  email: "jialinl@umass.edu"
-  linkedin: "jialin-li-106285117"
-
-analytics:
-  enabled: true
-  measurement_id: "G-7WWRGCV8XR"
-
-# This repository supplies its own layouts and styles; disable the default Primer theme.
-theme: null
-include:
-  - _pages
-  - files
+include: [_pages, files]
 exclude:
-  - .bundle
-  - .github
-  - .sass-cache
-  - .jekyll-cache
-  - .DS_Store
-  - .Rhistory
-  - "**/.DS_Store"
-  - "**/.Rhistory"
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - THIRD_PARTY_NOTICES.md
   - README.md
+  - Preview.command
   - scripts
   - vendor
+  - .bundle
+  - .github
+  - .DS_Store
+  - "**/.DS_Store"
+  - .Rhistory
+  - "**/.Rhistory"
   - node_modules
   - tmp
-  # Prevent retired template directories from being published if restored locally.
-  - unused
-  - markdown_generator
-  - talkmap
-  - talkmap.py
-  - talkmap.ipynb
-
-encoding: "utf-8"
+  - backups
+  - _site-preview
+  - _production-site
+encoding: utf-8
 markdown: kramdown
-highlighter: rouge
-future: true
-timezone: America/New_York
 kramdown:
   input: GFM
-  hard_wrap: false
-  auto_ids: true
-  entity_output: as_char
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-
-# Only the two academic HTML pages belong in search. Utilities and redirects do not.
+plugins: [jekyll-redirect-from, jekyll-sitemap]
+redirect_from:
+  json: false
 defaults:
   - scope:
       path: ""
       type: pages
     values:
       layout: single
-      author_profile: true
-      sitemap: false
       noindex: true
+      sitemap: false
   - scope:
-      path: "_pages/about.md"
-      type: pages
+      path: _pages/about.md
     values:
-      sitemap: true
       noindex: false
-      seo_title: "Jialin Li - Uncertainty Quantification"
+      sitemap: true
+      seo_title: Jialin Li - Uncertainty Quantification
       og_description: "Research in stochastic black-box models and uncertainty quantification. Publications, working papers, teaching, and CV."
   - scope:
-      path: "_pages/teaching.md"
-      type: pages
+      path: _pages/teaching.md
     values:
-      sitemap: true
       noindex: false
-
-sass:
-  sass_dir: _sass
-  style: compressed
-plugins:
-  - jekyll-sitemap
-  - jekyll-redirect-from
-whitelist:
-  - jekyll-sitemap
-  - jekyll-redirect-from
-redirect_from:
-  json: false
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+      sitemap: true
+      description: "Jialin Li's teaching experience in statistics and mathematics at the University of Massachusetts Amherst and the University of Maryland, College Park."

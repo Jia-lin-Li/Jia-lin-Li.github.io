@@ -1,14 +1,4 @@
 ---
 layout: default
 ---
-{% assign base_path = site.url | append: site.baseurl %}
-<div id="main" role="main">
-  {% if page.author_profile %}<div class="sidebar sticky">{% include author-profile.html %}</div>{% endif %}
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="{{ page.title | escape }}">
-    <div class="page__inner-wrap">
-      <header><h1 class="page__title" itemprop="headline">{{ page.title }}</h1></header>
-      <section class="page__content" itemprop="text">{{ content }}</section>
-    </div>
-  </article>
-</div>
+<div class="document-layout"><header class="document-heading"><h1>{{ page.title }}</h1></header><div class="document-content">{{ content }}</div></div>

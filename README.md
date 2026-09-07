@@ -1,127 +1,84 @@
 # Jialin Li's academic website
 
-Source for [jia-lin-li.github.io](https://jia-lin-li.github.io/), built with
-Jekyll and hosted on GitHub Pages. The site uses the AcademicPages / Minimal
-Mistakes theme.
+This folder is the source of https://jia-lin-li.github.io/. It uses Jekyll and GitHub Pages. It can be edited, previewed, and published without Codex.
+
+## Open the folder
+
+The working folder on this Mac is `/Users/Burninghorn/AcademicWebsite`. In Finder, press Command+Shift+G and paste that path. Drag the folder into Finder's sidebar to keep it handy. Open the folder in a plain-text/code editor; do not edit source files as rich text in Word.
 
 ## Where to edit
 
 | Content | File |
 | --- | --- |
-| Biography, publications, and working papers | `_pages/about.md` |
+| Introduction and research focus | `_pages/about.md` |
+| Papers, author lists, statuses, notes, and paper/video links | `_data/research.yml` |
 | Teaching experience | `_pages/teaching.md` |
-| CV and resume redirects | `_pages/cv.md`, `_pages/resume.md` |
-| Privacy notice | `_pages/terms.md` |
-| Downloadable CV | `files/CV_JialinLi.pdf` |
-| Teaching syllabus | `files/S315_Fall24_Syllabus_JL.pdf` |
-| Navigation links | `_data/navigation.yml` |
-| Name, contact details, portrait, and metadata | `_config.yml` |
-| Portrait, browser icon, and social preview image | `images/selfphoto.png` |
-| Search and sharing metadata markup | `_includes/seo.html` |
-| Browser icons and extra head markup | `_includes/head.html` |
+| Name, title, department, university, email, site description, and Analytics ID | `_config.yml` |
+| Author-order note and homepage structure | `_layouts/home.html` |
+| Navigation labels | `_layouts/default.html` |
+| Font sizes, colors, spacing, and responsive layout | `assets/css/editorial.css` |
+| Portrait and browser icon | `images/selfphoto.png` |
+| CV | `files/CV_JialinLi.pdf` |
+| Retained syllabus PDF | `files/S315_Fall24_Syllabus_JL.pdf` |
+| Privacy text | `_pages/terms.md` |
 
-The homepage's `seo_title` and `og_description` are configured in its scoped
-`defaults` entry in `_config.yml`. These control browser/search and sharing
-metadata independently of the visible “About me” heading. The site title remains
-“Jialin Li” in the navigation. Page content and research links live in Markdown;
-there is no separate publications database or generator.
+Biography and teaching are Markdown. Paper entries are YAML: preserve indentation with spaces. Each paper has `title`, `authors`, `url`, and optional `journal`, `details`, `status`, `video`, and `note`. Reorder the groups or entries to change their display order. Notes support Markdown links. Keep the existing filenames when replacing PDFs or the portrait.
 
-## Local preview
+## Preview locally
 
-With Ruby and Bundler installed, use the project launcher:
+Double-click `Preview.command` in Finder. Keep the Terminal window open and visit http://127.0.0.1:4173/. The terminal can be used independently of Codex. Press Control+C in that window to stop the server.
+
+Alternatively, open Terminal in this folder and run:
+
+```sh
+bash scripts/preview.sh
+```
+
+The preview automatically rebuilds after edits to Markdown, YAML paper data, layouts, and CSS. Refresh the browser after saving. Restart the server after changes to `_config.yml` or `_config.dev.yml`. If the port is already in use, use the preview already running or stop that process before starting another one.
+
+On this Mac, the Ruby dependencies are already installed in `vendor/bundle`. On a fresh setup with Ruby and Bundler available, install the locked dependencies with:
 
 ```sh
 bash scripts/bundle.sh install
-bash scripts/bundle.sh exec jekyll serve --config _config.yml,_config.dev.yml
 ```
 
-Open <http://localhost:4000>. The development configuration uses local URLs,
-disables analytics, and expands CSS. Restart Jekyll after configuration changes.
-Keep `Gemfile.lock` so dependency versions are reproducible.
+The launcher handles this Mac's existing Ruby/OpenSSL architecture arrangement without changing system Ruby. No command depends on a hidden Codex directory. The whole folder can be moved; scripts resolve its location automatically. An installation on a different computer may require Ruby setup and reinstalling its native dependencies.
 
-The launcher uses the locked gems in ignored `vendor/bundle/`. On this Mac it
-runs the existing universal system Ruby in Intel mode to match the existing
-Homebrew OpenSSL library, and supplies the Command Line Tools C++ header path
-when compiling native gems. Other Ruby installations use their selected runtime.
-It runs Bundler normally, including dependency checks; it does not install a new
-Ruby, modify system gems, or use `JEKYLL_NO_BUNDLER_REQUIRE`.
+## Validate and publish
 
-After a macOS or toolchain update, reinstall native extensions if needed:
+Previewing never publishes changes. Production and preview build outputs are separate, and both are generated: do not edit `_site/` or `_site-preview/`.
+
+Before publishing:
 
 ```sh
-bash scripts/bundle.sh pristine
-```
-
-## Build and check
-
-```sh
-bash scripts/bundle.sh exec jekyll build --safe
+bash scripts/build-production.sh
 python3 scripts/check_site.py _site
 ```
 
-`check_site.py` uses only the Python 3 standard library. It checks generated HTML,
-CSS assets, manifest icons, homepage metadata, redirect targets, and indexing
-rules. It accepts only the intended public files and XML sitemap entries, so
-retired template pages cannot accidentally return. It checks local file destinations;
-external websites and fragment anchors are outside its scope.
+Publishing uses the existing `master` branch on GitHub. Review your changes, commit them, and push `master` using Git or your preferred Git client. A normal terminal workflow after reviewing `git diff` is:
 
-The “Check website” GitHub Actions workflow runs the official GitHub Pages Jekyll
-build action and these checks on pushes and pull requests. It validates the site;
-it does not deploy it or change the repository's Pages publishing settings.
-
-## Videos and mathematics
-
-Overview videos use the same outlined button style as paper links and sit next
-to the corresponding paper in `_pages/about.md`. Preserve the existing video URLs
-when updating titles or citation details.
-
-MathJax loads only on pages whose YAML front matter contains `math: true`:
-
-```yaml
----
-title: "A page with equations"
-math: true
----
+```sh
+git status
+git diff
+git add _pages/about.md _pages/teaching.md _data/research.yml
+git commit -m "Update research and teaching"
+git push origin master
 ```
 
-The current pages contain no equations, so they make no MathJax requests. The
-optional loader uses the pinned MathJax 2.7.9 release, which supports Jekyll's
-Kramdown math markup, inline `$...$` / `\(...\)`, and display equations. See the
-[MathJax documentation](https://docs.mathjax.org/en/v2.7-latest/start.html).
+Stage the specific files you actually edited. GitHub runs the website checks and its existing Pages build/deployment. The last successful deployed version stays online while the next build runs. Check the repository's Actions page after publishing. The local launcher and backup archive are excluded from publication.
 
-## Public pages and indexing
+## Search and Analytics
 
-The public academic pages are `/` and `/teaching/`, plus the CV and syllabus PDFs.
-`/about/` and `/about.html` redirect to the homepage; `/cv/` and `/resume` redirect
-directly to the CV PDF. GitHub Pages implements these as HTML redirects, not HTTP
-301 responses.
+`_config.yml` is the public configuration, so ordinary GitHub Pages builds use the correct domain and indexing settings. `_config.dev.yml` disables tracking and indexing for local previews.
 
-`/404.html` provides the missing-page fallback, and `/terms/` contains the short
-privacy notice. Both have `noindex` metadata and are excluded from the XML sitemap.
-The old HTML sitemap, empty blog feed, and template examples are no longer built.
-Crawlers must still be allowed to visit utility URLs to read their `noindex` tags.
+Production builds require `JEKYLL_ENV=production` (set by the build script and GitHub workflow). They include the existing Google Analytics measurement ID `G-7WWRGCV8XR`, existing Search Console verification tags, canonical URLs, Open Graph and Twitter metadata, and portrait icons. The homepage and Teaching page allow indexing; utility/redirect pages request no indexing. `sitemap.xml` includes the two academic pages and both PDFs. The privacy page describes the active environment and never records its own visits.
 
-New pages default to `noindex` and are excluded from the XML sitemap. When adding
-an academic page, explicitly set `noindex: false` and `sitemap: true`, and update
-the intended-file and sitemap lists in `scripts/check_site.py`. Search results
-update after crawlers revisit the deployed site; a local build does not update
-Google's index.
+Google Search updates happen after crawling. In the existing Search Console property, submit `https://jia-lin-li.github.io/sitemap.xml` and request indexing of the homepage and Teaching page with URL Inspection. Confirm actual Analytics visits in the existing property's Realtime report. Having tags configured does not by itself prove Google has indexed the new content or received Analytics events.
 
-## Repository conventions
+## Backup and rollback
 
-- `_site/` and `vendor/bundle/` are local generated files, ignored by Git.
-- `_layouts/` and `_includes/` contain only the current page shell, metadata,
-  contact profile, navigation, privacy link, analytics, and optional MathJax.
-- `assets/js/main.js` contains the Contact and responsive-navigation behavior.
-  It is used directly: no jQuery, npm dependencies, or JavaScript build step.
-- `_includes/icon.html` contains the three inline SVG icons. There are no icon
-  font downloads. Attribution is retained in `THIRD_PARTY_NOTICES.md`.
-- `_sass/` keeps the active responsive theme styles and their Susy/Breakpoint
-  dependencies. These dependencies should not be deleted without replacing the
-  layout rules that call them.
-- The site supplies its own theme files. `theme: null` prevents GitHub Pages
-  from injecting the unrelated Primer stylesheet.
-- Production analytics is configured in `_config.yml`; the development config
-  disables it. The 404 and privacy pages also disable analytics.
-- Removed template material remains in Git history. The original theme license
-  is retained in `LICENSE`.
+The original site, including the last biography and teaching edits, is preserved at the Git tag `backup/pre-editorial-20260907`. A readable source archive is also stored locally at `backups/academic-website-before-editorial-20260907.tar.gz`. The archive and the entire backups folder are excluded from Git and publication.
+
+Git retains the redesign as a separate commit. If a rollback is needed, revert that commit on `master`, validate, and push. Avoid deleting the repository or its history. Keep the backup until you are comfortable with the new site.
+
+The earlier hidden editorial preview is a historical prototype. Edit this folder for future changes.

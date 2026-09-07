@@ -1,4 +1,4 @@
-{% if site.analytics.enabled and page.analytics != false %}
+{% if site.public_site and jekyll.environment == 'production' and site.analytics.enabled and page.analytics != false %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.measurement_id }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

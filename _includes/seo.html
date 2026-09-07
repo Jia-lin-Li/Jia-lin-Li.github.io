@@ -1,29 +1,32 @@
 {% assign seo_title = page.seo_title | default: page.title %}
-{% unless page.seo_title %}{% assign seo_title = seo_title | append: " " | append: site.title_separator | append: " " | append: site.title %}{% endunless %}
-{% assign seo_description = page.description | default: page.excerpt | default: site.description | markdownify | strip_html | strip_newlines %}
+{% unless page.seo_title %}{% assign seo_title = seo_title | append: ' - ' | append: site.title %}{% endunless %}
+{% assign seo_description = page.description | default: site.description %}
 {% assign social_description = page.og_description | default: seo_description %}
-{% assign canonical_url = page.url | prepend: base_path | replace: "/index.html", "/" %}
-{% assign portrait_url = site.og_image | prepend: "/images/" | prepend: base_path %}
+{% assign canonical_url = page.url | replace: '/index.html', '/' | absolute_url %}
+{% assign portrait_url = '/images/selfphoto.png' | absolute_url %}
 <title>{{ seo_title | escape }}</title>
 <meta name="description" content="{{ seo_description | escape }}">
+{% if site.public_site and jekyll.environment == 'production' %}
 {% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+{% else %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <link rel="canonical" href="{{ canonical_url }}">
-<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{{ site.title | escape }}">
 <meta property="og:title" content="{{ seo_title | escape }}">
 <meta property="og:description" content="{{ social_description | escape }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ canonical_url }}">
 <meta property="og:image" content="{{ portrait_url }}">
-<meta property="og:image:alt" content="{{ site.author.name | escape }}">
+<meta property="og:image:alt" content="Portrait of {{ site.name | escape }}">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ seo_title | escape }}">
 <meta name="twitter:description" content="{{ social_description | escape }}">
 <meta name="twitter:url" content="{{ canonical_url }}">
 <meta name="twitter:image" content="{{ portrait_url }}">
+<meta name="twitter:image:alt" content="Portrait of {{ site.name | escape }}">
 {% for token in site.google_site_verifications %}<meta name="google-site-verification" content="{{ token }}">{% endfor %}
-{% if page.url == "/" %}
+{% if page.url == '/' %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":{{ site.name | jsonify }},"url":{{ base_path | jsonify }},"image":{{ portrait_url | jsonify }},"sameAs":[{{ site.author.linkedin | prepend: "https://www.linkedin.com/in/" | jsonify }}]}
+{"@context":"https://schema.org","@type":"Person","name":{{ site.name | jsonify }},"url":{{ canonical_url | jsonify }},"image":{{ portrait_url | jsonify }},"jobTitle":{{ site.author.title | jsonify }},"affiliation":{"@type":"CollegeOrUniversity","name":{{ site.author.university | jsonify }},"department":{"@type":"Organization","name":{{ site.author.department | jsonify }}}}}
 </script>
 {% endif %}

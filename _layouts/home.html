@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<section class="intro" aria-label="About me">
+  <div class="identity">
+    <img class="portrait" src="{{ '/images/selfphoto.png' | relative_url }}" alt="Portrait of {{ site.name | escape }}" width="512" height="512">
+    <p class="position">{{ site.author.title | escape }}</p>
+    <p class="department">{{ site.author.department | escape }}</p>
+    <p class="institution">{{ site.author.university | escape }}</p>
+    <div class="identity-links">
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email | escape }}</a>
+    </div>
+  </div>
+  <div class="biography">{{ content }}</div>
+</section>
+<section id="research" class="research-sections" aria-labelledby="papers-heading">
+  <header class="papers-heading">
+    <h1 id="papers-heading">Papers</h1>
+    <p>Authors in alphabetical order for all of my papers.</p>
+  </header>
+  {% for group in site.data.research %}
+  <section class="research-section" aria-labelledby="{{ group.id }}">
+    <header class="section-heading">
+      <span class="section-number" aria-hidden="true">0{{ forloop.index }}</span>
+      <h2 id="{{ group.id }}">{{ group.title }}</h2>
+    </header>
+    <div class="paper-list">
+      {% for paper in group.papers %}
+      <article class="paper">
+        {% if paper.teaser %}
+        <p class="teaser">{{ paper.teaser }}</p>
+        {% else %}
+        <h3>{{ paper.title }}</h3>
+        <p class="authors">{{ paper.authors }}</p>
+        <p class="venue">{% if paper.status %}<span class="status">{{ paper.status }}</span>{% if paper.journal %}<span class="separator"> / </span>{% endif %}{% endif %}{% if paper.journal %}<em>{{ paper.journal }}</em>{% endif %} {{ paper.details }}</p>
+        <div class="paper-actions">
+          <a href="{{ paper.url }}">Paper <span aria-hidden="true">↗</span></a>
+          {% if paper.video %}<a href="{{ paper.video }}"><span aria-hidden="true">▷</span> Overview video <span aria-hidden="true">↗</span></a>{% endif %}
+        </div>
+        {% if paper.note %}<div class="paper-note">{{ paper.note | markdownify }}</div>{% endif %}
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</section>
