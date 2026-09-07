@@ -7,9 +7,8 @@ permalink: /teaching/
 
 ## Instructor, University of Massachusetts, Amherst
 
-* STAT525 Regression and Analysis of Variance (Fall 2025)
-* STAT315 Statistics I (Fall 2025) 
-* STAT315 Statistics I (Fall 2024) [Syllabus](/files/S315_Fall24_Syllabus_JL.pdf)
+* STAT525 Regression and Analysis of Variance (Fall 2025, Spring 2026, Fall 2026)
+* STAT315 Statistics I (Fall 2024, Fall 2025, Spring 2026) 
 
 ## Instructor, University of Maryland, College Park
 
