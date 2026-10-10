@@ -1,7 +1,9 @@
 - id: work-in-progress
   title: Work in Progress
   papers:
-    - teaser: "Coming up next: 🐔!"
+    - title: "Nonnegativity Shapes Predictive Uncertainty: Latent Process Factors and Quantile Construction"
+      authors: Jialin Li
+      teaser: "Preview coming soon! (Liked by 🐔)"
 - id: working-papers
   title: Working Papers
   papers:
