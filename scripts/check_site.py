@@ -33,7 +33,7 @@ class Page(HTMLParser):
                 self.refresh = attrs.get("content", "")
         if tag == "link" and attrs.get("rel") == "canonical":
             self.canonical = attrs.get("href")
-        for key in ("href", "src", "poster"):
+        for key in ("href", "src", "poster", "data-video"):
             if attrs.get(key):
                 self.references.append(attrs[key])
         if attrs.get("srcset"):
@@ -139,7 +139,9 @@ def check_site(root):
         "resume.html": "/files/CV_JialinLi.pdf",
     }
     expected_files = academic_pages | utility_pages | set(redirects) | {
-        "assets/css/editorial.css", "images/selfphoto.png",
+        "assets/css/editorial.css", "assets/js/profile-travel.js",
+        "assets/media/profile-journey.mp4", "images/selfphoto.png",
+        "images/profile-spiral.webp", "images/profile-spiral.jpg",
         "images/manifest.json", "files/CV_JialinLi.pdf",
         "sitemap.xml", "robots.txt",
     }
@@ -148,6 +150,23 @@ def check_site(root):
         errors.append("Required published file is missing: {}".format(name))
     for name in sorted(actual_files - expected_files):
         errors.append("Unexpected published file: {}".format(name))
+
+    # The profile remains usable without scripting; its optional movie must
+    # not compete with the portrait or academic content during initial load.
+    home_text = (root / "index.html").read_text(encoding="utf-8")
+    videos = re.findall(r"<video\b([^>]*)>", home_text)
+    if len(videos) != 1 or not re.search(r'preload="none"', videos[0]):
+        errors.append("The profile video needs preload=none.")
+    elif re.search(r"\b(?:src|autoplay|loop)\b", videos[0]):
+        errors.append("The profile video must have no source, autoplay, or loop before interaction.")
+    for name, limit in {
+        "images/profile-spiral.webp": 100_000,
+        "assets/js/profile-travel.js": 5_000,
+        "assets/media/profile-journey.mp4": 1_000_000,
+    }.items():
+        asset = root / name
+        if asset.exists() and asset.stat().st_size > limit:
+            errors.append("Profile asset exceeds its loading budget: {}".format(name))
 
     for name in academic_pages | utility_pages | set(redirects):
         page = pages.get(root / name)

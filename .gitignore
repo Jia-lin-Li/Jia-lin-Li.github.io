@@ -16,3 +16,11 @@ __pycache__/
 _site-preview/
 _production-site/
 backups/
+
+# Local artwork sources and renders; keep only the website's optimized assets.
+/output/
+/images/DSC01951.JPG
+/images/DSC01951-portrait-edited.png
+/images/DSC01951-portrait-edited.prompt.txt
+/images/hotel-spiral.png
+/images/hotel-spiral-settings.json

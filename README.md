@@ -17,11 +17,17 @@ The working folder on this Mac is `/Users/Burninghorn/AcademicWebsite`. In Finde
 | Author-order note and homepage structure | `_layouts/home.html` |
 | Navigation labels | `_layouts/default.html` |
 | Font sizes, colors, spacing, and responsive layout | `assets/css/editorial.css` |
-| Portrait and browser icon | `images/selfphoto.png` |
+| Profile portrait and social preview | `images/profile-spiral.webp` and `images/profile-spiral.jpg` |
+| Profile journey movie and button | `assets/media/profile-journey.mp4` and `assets/js/profile-travel.js` |
+| Browser icon | `images/selfphoto.png` |
 | CV | `files/CV_JialinLi.pdf` |
 | Privacy text | `_pages/terms.md` |
 
 Biography and teaching are Markdown. Paper entries are YAML: preserve indentation with spaces. Each paper has `title`, `authors`, `url`, and optional `journal`, `details`, `status`, `video`, `note`, and `abstract`. Reorder the groups or entries to change their display order. Notes and abstracts support Markdown links. An `abstract` appears beneath its paper in a collapsible block, closed by default. Keep the existing filenames when replacing PDFs or the portrait.
+
+The profile uses a 512-square still image. The “travel into the picture” button loads a silent, 384-square, 12-second H.264 movie only after a click, plays once, and returns to the still. Click again during playback to stop. There is no automatic animation, including for visitors with reduced motion enabled. Without JavaScript the still remains and the button is hidden. No editor, rendering library, or large source texture is sent to visitors. The original portrait remains the browser icon.
+
+The chosen composition is saved locally in `images/hotel-spiral-settings.json`; its source PNG is `images/hotel-spiral.png`. The cleanup and reproducible rendering files are under `output/hotel-profile-final/`. These working files and the original camera photo are ignored by Git and excluded from publication; only the optimized profile assets are intended for commit and deployment. The browser icon and image manifest also remain in Git.
 
 ## Preview locally
 

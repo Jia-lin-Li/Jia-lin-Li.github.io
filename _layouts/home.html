@@ -3,7 +3,17 @@ layout: default
 ---
 <section class="intro" aria-label="About me">
   <div class="identity">
-    <img class="portrait" src="{{ '/images/selfphoto.png' | relative_url }}" alt="Portrait of {{ site.name | escape }}" width="512" height="512">
+    <div class="profile-picture" data-profile-journey>
+      <div class="profile-frame">
+        <picture>
+          <source srcset="{{ '/images/profile-spiral.webp' | relative_url }}" type="image/webp">
+          <img class="portrait" src="{{ '/images/profile-spiral.jpg' | relative_url }}" alt="{{ site.name | escape }} beside a spiral that leads through a hotel room into a framed picture" width="512" height="512" decoding="async">
+        </picture>
+        <video id="profile-journey" class="profile-journey" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+      </div>
+      <button class="profile-travel" type="button" data-video="{{ '/assets/media/profile-journey.mp4' | relative_url }}" aria-controls="profile-journey" aria-pressed="false" hidden><span aria-hidden="true">↻</span> <span data-label>travel into the picture</span></button>
+      <span class="visually-hidden" data-status role="status" aria-live="polite"></span>
+    </div>
     <p class="position">{{ site.author.title | escape }}</p>
     <p class="department">{{ site.author.department | escape }}</p>
     <p class="institution">{{ site.author.university | escape }}</p>
@@ -13,6 +23,7 @@ layout: default
   </div>
   <div class="biography">{{ content }}</div>
 </section>
+<script src="{{ '/assets/js/profile-travel.js' | relative_url }}" defer></script>
 <section id="research" class="research-sections" aria-labelledby="papers-heading">
   <header class="papers-heading">
     <h1 id="papers-heading">Papers</h1>

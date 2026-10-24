@@ -35,6 +35,12 @@ exclude:
   - node_modules
   - tmp
   - backups
+  - output
+  - images/DSC01951.JPG
+  - images/DSC01951-portrait-edited.png
+  - images/DSC01951-portrait-edited.prompt.txt
+  - images/hotel-spiral.png
+  - images/hotel-spiral-settings.json
   - _site-preview
   - _production-site
 encoding: utf-8
