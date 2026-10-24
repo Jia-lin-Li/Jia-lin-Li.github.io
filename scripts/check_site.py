@@ -141,7 +141,7 @@ def check_site(root):
     expected_files = academic_pages | utility_pages | set(redirects) | {
         "assets/css/editorial.css", "images/selfphoto.png",
         "images/manifest.json", "files/CV_JialinLi.pdf",
-        "files/S315_Fall24_Syllabus_JL.pdf", "sitemap.xml", "robots.txt",
+        "sitemap.xml", "robots.txt",
     }
     actual_files = {path.relative_to(root).as_posix() for path in root.rglob("*") if path.is_file()}
     for name in sorted(expected_files - actual_files):
@@ -168,10 +168,10 @@ def check_site(root):
 
     expected_sitemap = {
         urljoin(homepage.canonical, path) for path in
-        ("", "teaching/", "files/CV_JialinLi.pdf", "files/S315_Fall24_Syllabus_JL.pdf")
+        ("", "teaching/", "files/CV_JialinLi.pdf")
     }
     if {normalized_url(url) for url in sitemap_urls} != {normalized_url(url) for url in expected_sitemap}:
-        errors.append("Sitemap must list only the two academic pages and both PDFs.")
+        errors.append("Sitemap must list only the two academic pages and the CV PDF.")
     robots = root / "robots.txt"
     if robots.is_file() and re.search(r"(?im)^\s*Disallow:\s*/", robots.read_text(encoding="utf-8")):
         errors.append("Do not block crawling: search engines must be able to read utility-page noindex tags.")

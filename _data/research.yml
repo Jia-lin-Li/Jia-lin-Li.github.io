@@ -1,9 +1,10 @@
 - id: work-in-progress
   title: Work in Progress
   papers:
-    - title: "Nonnegativity Shapes Predictive Uncertainty: Latent Process Factors and Quantile Construction"
+    - title: "Nonnegativity Shapes Predictive Uncertainty: Complementary Model Fits and Quantile Construction"
       authors: Jialin Li
-      teaser: "Preview coming soon! (Liked by 🐔)"
+      abstract: >-
+        Knowledge that a response cannot be negative could expose model deficiency when its distribution has large uncertainty or extreme events are of interest, a prominent issue when each of few long vector responses from a black-box system is observed at a distinct covariate setting. This paper develops a nonparametric framework for constructing predictive response distributions that respect the knowledge in principle given any setting, possibly around an existing mean predictor or simulator. The method introduces a latent factor model that represents response intensity through nonnegative patterns whose amplitudes follow rectified Gaussian processes over covariates. We derive a variational algorithm that fits the factorization and the posterior jointly, based on an integrated probabilistic view. By controlling its conditional dispersion, the model can generate abundant non-extreme fits that show complementary strengths in estimating different distributional shape features, illustrated by L-moment ratios. The method selects each L-moment, or ratio, separately from candidate fits using single validation responses, and assemble them through an established quantile expansion. We test the method in numerical experiments, including an agricultural risk demonstration where we predict daily low and high streamflow. Remarkably, although each single fit is “mode-seeking”, assembling fits by shape order yields substantial tail improvement.
 - id: working-papers
   title: Working Papers
   papers:

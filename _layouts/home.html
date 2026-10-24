@@ -32,12 +32,22 @@ layout: default
         {% else %}
         <h3>{{ paper.title }}</h3>
         <p class="authors">{{ paper.authors }}</p>
+        {% if paper.status or paper.journal or paper.details %}
         <p class="venue">{% if paper.status %}<span class="status">{{ paper.status }}</span>{% if paper.journal %}<span class="separator"> / </span>{% endif %}{% endif %}{% if paper.journal %}<em>{{ paper.journal }}</em>{% endif %} {{ paper.details }}</p>
+        {% endif %}
+        {% if paper.url or paper.video %}
         <div class="paper-actions">
-          <a href="{{ paper.url }}">Paper <span aria-hidden="true">↗</span></a>
+          {% if paper.url %}<a href="{{ paper.url }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
           {% if paper.video %}<a href="{{ paper.video }}"><span aria-hidden="true">▷</span> Overview video <span aria-hidden="true">↗</span></a>{% endif %}
         </div>
+        {% endif %}
         {% if paper.note %}<div class="paper-note">{{ paper.note | markdownify }}</div>{% endif %}
+        {% endif %}
+        {% if paper.abstract %}
+        <details class="paper-abstract">
+          <summary>Abstract</summary>
+          <div class="abstract-content">{{ paper.abstract | markdownify }}</div>
+        </details>
         {% endif %}
       </article>
       {% endfor %}

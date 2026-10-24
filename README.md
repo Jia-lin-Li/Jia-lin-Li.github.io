@@ -19,10 +19,9 @@ The working folder on this Mac is `/Users/Burninghorn/AcademicWebsite`. In Finde
 | Font sizes, colors, spacing, and responsive layout | `assets/css/editorial.css` |
 | Portrait and browser icon | `images/selfphoto.png` |
 | CV | `files/CV_JialinLi.pdf` |
-| Retained syllabus PDF | `files/S315_Fall24_Syllabus_JL.pdf` |
 | Privacy text | `_pages/terms.md` |
 
-Biography and teaching are Markdown. Paper entries are YAML: preserve indentation with spaces. Each paper has `title`, `authors`, `url`, and optional `journal`, `details`, `status`, `video`, and `note`. Reorder the groups or entries to change their display order. Notes support Markdown links. Keep the existing filenames when replacing PDFs or the portrait.
+Biography and teaching are Markdown. Paper entries are YAML: preserve indentation with spaces. Each paper has `title`, `authors`, `url`, and optional `journal`, `details`, `status`, `video`, `note`, and `abstract`. Reorder the groups or entries to change their display order. Notes and abstracts support Markdown links. An `abstract` appears beneath its paper in a collapsible block, closed by default. Keep the existing filenames when replacing PDFs or the portrait.
 
 ## Preview locally
 
@@ -71,7 +70,7 @@ Stage the specific files you actually edited. GitHub runs the website checks and
 
 `_config.yml` is the public configuration, so ordinary GitHub Pages builds use the correct domain and indexing settings. `_config.dev.yml` disables tracking and indexing for local previews.
 
-Production builds require `JEKYLL_ENV=production` (set by the build script and GitHub workflow). They include the existing Google Analytics measurement ID `G-7WWRGCV8XR`, existing Search Console verification tags, canonical URLs, Open Graph and Twitter metadata, and portrait icons. The homepage and Teaching page allow indexing; utility/redirect pages request no indexing. `sitemap.xml` includes the two academic pages and both PDFs. The privacy page describes the active environment and never records its own visits.
+Production builds require `JEKYLL_ENV=production` (set by the build script and GitHub workflow). They include the existing Google Analytics measurement ID `G-7WWRGCV8XR`, existing Search Console verification tags, canonical URLs, Open Graph and Twitter metadata, and portrait icons. The homepage and Teaching page allow indexing; utility/redirect pages request no indexing. `sitemap.xml` includes the two academic pages and the CV PDF. The privacy page describes the active environment and never records its own visits.
 
 Google Search updates happen after crawling. In the existing Search Console property, submit `https://jia-lin-li.github.io/sitemap.xml` and request indexing of the homepage and Teaching page with URL Inspection. Confirm actual Analytics visits in the existing property's Realtime report. Having tags configured does not by itself prove Google has indexed the new content or received Analytics events.
 
