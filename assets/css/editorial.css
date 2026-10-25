@@ -35,13 +35,19 @@ main.wrap{padding-bottom:48px}
 .profile-frame{position:relative;aspect-ratio:1;overflow:hidden;filter:saturate(.82) contrast(.92)}
 .profile-frame .portrait{width:100%;height:auto;margin:0}
 .profile-frame picture{display:block}
-.profile-journey{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;visibility:hidden}
+.profile-spiral{position:absolute;inset:0;z-index:1;opacity:0;transition:opacity .45s ease}
+.profile-picture.is-transformed .profile-spiral{opacity:1}
+.profile-journey{position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:contain;visibility:hidden}
 .profile-picture.is-traveling .profile-journey{visibility:visible}
-.profile-travel{display:inline-flex;align-items:center;gap:6px;max-width:100%;margin-top:10px;padding:4px 0;border:0;border-bottom:1px dotted #a9bbb0;background:transparent;color:var(--teal);font:inherit;font-size:.75rem;line-height:1.5;cursor:pointer;text-align:left}
+.profile-travel{display:inline-flex;align-items:center;gap:6px;max-width:100%;min-height:48px;margin-top:10px;padding:4px 0;border:0;background:transparent;color:var(--teal);font:inherit;font-size:.75rem;line-height:1.5;cursor:pointer;text-align:left}
 .profile-travel[hidden]{display:none}
-.profile-travel:hover{color:#124b41;border-bottom-style:solid}
+.profile-travel [data-label]{text-decoration:underline dotted #a9bbb0 1px;text-underline-offset:3px}
+.profile-travel:hover{color:#124b41}
+.profile-travel:hover [data-label]{text-decoration-style:solid}
+.profile-travel:disabled{cursor:progress}
 .profile-travel:focus-visible{outline:2px solid var(--teal);outline-offset:4px}
 .profile-travel [aria-hidden]{font-size:1.1em}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
-@media(max-width:720px){.profile-picture{width:160px;margin-bottom:22px}.profile-travel{min-height:34px}}
+@media(prefers-reduced-motion:reduce){.profile-spiral{transition:none}}
+@media(max-width:720px){.profile-picture{width:160px;margin-bottom:22px}}
 @media print{.profile-picture{width:100px}.profile-travel,.profile-journey{display:none}}

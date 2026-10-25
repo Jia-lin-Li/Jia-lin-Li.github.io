@@ -5,13 +5,19 @@ layout: default
   <div class="identity">
     <div class="profile-picture" data-profile-journey>
       <div class="profile-frame">
-        <picture>
-          <source srcset="{{ '/images/profile-spiral.webp' | relative_url }}" type="image/webp">
-          <img class="portrait" src="{{ '/images/profile-spiral.jpg' | relative_url }}" alt="{{ site.name | escape }} beside a spiral that leads through a hotel room into a framed picture" width="384" height="384" decoding="async">
+        <picture data-source-portrait>
+          <source srcset="{{ '/images/profile-source.webp' | relative_url }}" type="image/webp">
+          <img class="portrait" src="{{ '/images/profile-source.jpg' | relative_url }}" alt="{{ site.name | escape }} overlooking a forest, hotel, and turquoise lake" width="384" height="384" decoding="async">
         </picture>
+        <template data-spiral-portrait>
+          <picture class="profile-spiral" aria-hidden="true">
+            <source srcset="{{ '/images/profile-spiral.webp' | relative_url }}" type="image/webp">
+            <img class="portrait" src="{{ '/images/profile-spiral.jpg' | relative_url }}" alt="{{ site.name | escape }} beside a spiral that leads through a hotel room into a framed picture" width="384" height="384" decoding="async">
+          </picture>
+        </template>
         <video id="profile-journey" class="profile-journey" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
       </div>
-      <button class="profile-travel" type="button" data-video="{{ '/assets/media/profile-journey.mp4' | relative_url }}" aria-controls="profile-journey" aria-pressed="false" hidden><span aria-hidden="true">↻</span> <span data-label>travel into the picture</span></button>
+      <button class="profile-travel" type="button" data-video="{{ '/assets/media/profile-journey.mp4' | relative_url }}" aria-controls="profile-journey" aria-pressed="false" hidden><span aria-hidden="true">↻</span> <span data-label>twist to travel</span></button>
       <span class="visually-hidden" data-status role="status" aria-live="polite"></span>
     </div>
     <p class="position">{{ site.author.title | escape }}</p>

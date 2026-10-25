@@ -3,7 +3,7 @@
 {% assign seo_description = page.description | default: site.description %}
 {% assign social_description = page.og_description | default: seo_description %}
 {% assign canonical_url = page.url | replace: '/index.html', '/' | absolute_url %}
-{% assign portrait_url = '/images/profile-spiral.jpg' | absolute_url %}
+{% assign portrait_url = '/images/profile-source.jpg' | absolute_url %}
 <title>{{ seo_title | escape }}</title>
 <meta name="description" content="{{ seo_description | escape }}">
 {% if site.public_site and jekyll.environment == 'production' %}

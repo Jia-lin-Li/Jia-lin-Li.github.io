@@ -1,4 +1,4 @@
-/* The movie has no source until a visitor explicitly starts the journey. */
+/* First reveal the spiral; only a later click requests and plays the movie. */
 (() => {
   const root = document.querySelector('[data-profile-journey]');
   if (!root) return;
@@ -7,8 +7,40 @@
   const label = button.querySelector('[data-label]');
   const status = root.querySelector('[data-status]');
   if (!video.canPlayType('video/mp4')) return;
+  let transformed = false;
+  let transforming = false;
   let requested = false;
   let attempt = 0;
+
+  async function transform() {
+    if (transforming) return;
+    transforming = true;
+    button.disabled = true;
+    button.setAttribute('aria-busy', 'true');
+    label.textContent = 'transforming…';
+    status.textContent = 'Preparing the spiral picture.';
+    const picture = root.querySelector('[data-spiral-portrait]').content.firstElementChild.cloneNode(true);
+    root.querySelector('.profile-frame').append(picture);
+    try {
+      await picture.querySelector('img').decode();
+      // Establish opacity 0 before revealing, including when the image is cached.
+      picture.getBoundingClientRect();
+      root.classList.add('is-transformed');
+      root.querySelector('[data-source-portrait]').setAttribute('aria-hidden', 'true');
+      picture.removeAttribute('aria-hidden');
+      transformed = true;
+      label.textContent = 'travel into the picture';
+      status.textContent = 'Picture transformed. Click again to travel into it.';
+    } catch {
+      picture.remove();
+      label.textContent = 'twist to travel';
+      status.textContent = 'The spiral picture could not load. Please try again.';
+    } finally {
+      transforming = false;
+      button.disabled = false;
+      button.removeAttribute('aria-busy');
+    }
+  }
 
   function restore(message = '') {
     requested = false;
@@ -22,6 +54,10 @@
 
   button.hidden = false;
   button.addEventListener('click', () => {
+    if (!transformed) {
+      transform();
+      return;
+    }
     if (requested) {
       restore('Journey stopped.');
       return;

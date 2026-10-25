@@ -17,17 +17,20 @@ The working folder on this Mac is `/Users/Burninghorn/AcademicWebsite`. In Finde
 | Author-order note and homepage structure | `_layouts/home.html` |
 | Navigation labels | `_layouts/default.html` |
 | Font sizes, colors, spacing, and responsive layout | `assets/css/editorial.css` |
-| Profile portrait and social preview | `images/profile-spiral.webp` and `images/profile-spiral.jpg` |
+| Default profile portrait and social preview | `images/profile-source.webp` and `images/profile-source.jpg` |
+| Transformed profile portrait | `images/profile-spiral.webp` and `images/profile-spiral.jpg` |
 | Profile journey movie and button | `assets/media/profile-journey.mp4` and `assets/js/profile-travel.js` |
-| Browser icon | `images/selfphoto.png` |
+| Browser icon (resized default portrait) | `images/selfphoto.png` |
 | CV | `files/CV_JialinLi.pdf` |
 | Privacy text | `_pages/terms.md` |
 
 Biography and teaching are Markdown. Paper entries are YAML: preserve indentation with spaces. Each paper has `title`, `authors`, `url`, and optional `journal`, `details`, `status`, `video`, `note`, and `abstract`. Reorder the groups or entries to change their display order. Notes and abstracts support Markdown links. An `abstract` appears beneath its paper in a collapsible block, closed by default. Keep the existing filenames when replacing PDFs or the portrait.
 
-The profile uses a 384-square still exported from the journey movie's decoded first frame, with its color profile converted to sRGB. The movie uses explicit Rec. 709 primaries and matrix with an sRGB transfer curve (1-13-1 color tags). A shared `.profile-frame` CSS filter applies 82% saturation and 92% contrast to both the still and video, giving them a softer appearance that fits the site. Keep this filter on their shared container to avoid a color jump on playback.
+The profile initially shows a 384-square crop of the cleaned, untransformed source photo. Its crop aligns the face position with the spiral portrait. The first click on “twist to travel” loads and fades in the spiral still, then changes the label to “travel into the picture.” The fade is disabled for reduced motion. The spiral assets stay inside an inert HTML template until that first click.
 
-The “travel into the picture” button loads the silent, 384-square, 12-second H.264 movie only after a click, plays once, and returns to the still. Click again during playback to stop. There is no automatic animation, including for visitors with reduced motion enabled. Without JavaScript the still remains and the button is hidden. No editor, rendering library, or large source texture is sent to visitors. The original portrait remains the browser icon.
+The spiral still is exported from the journey movie's decoded first frame, with its color profile converted to sRGB. The movie uses explicit Rec. 709 primaries and matrix with an sRGB transfer curve (1-13-1 color tags). A shared `.profile-frame` CSS filter applies 82% saturation and 92% contrast to the source photo, spiral still, and video, giving them a softer appearance that fits the site. Keep this filter on their shared container to avoid a color jump on playback.
+
+Once transformed, the “travel into the picture” button loads the silent, 384-square, 12-second H.264 movie only after another click, plays once, and returns to the spiral still. Click again during playback to stop. The spiral remains until the page is reloaded. There is no automatic animation. Without JavaScript the untransformed source remains and the button is hidden. No editor, rendering library, or large source texture is sent to visitors. The browser icon uses a 192-square PNG of the default untransformed portrait.
 
 The chosen composition is saved locally in `images/hotel-spiral-settings.json`; its source PNG is `images/hotel-spiral.png`. The cleanup and reproducible rendering files are under `output/hotel-profile-final/`. These working files and the original camera photo are ignored by Git and excluded from publication; only the optimized profile assets are intended for commit and deployment. The browser icon and image manifest also remain in Git.
 

@@ -142,6 +142,7 @@ def check_site(root):
         "assets/css/editorial.css", "assets/js/profile-travel.js",
         "assets/media/profile-journey.mp4", "images/selfphoto.png",
         "images/profile-spiral.webp", "images/profile-spiral.jpg",
+        "images/profile-source.webp", "images/profile-source.jpg",
         "images/manifest.json", "files/CV_JialinLi.pdf",
         "sitemap.xml", "robots.txt",
     }
@@ -159,8 +160,20 @@ def check_site(root):
         errors.append("The profile video needs preload=none.")
     elif re.search(r"\b(?:src|autoplay|loop)\b", videos[0]):
         errors.append("The profile video must have no source, autoplay, or loop before interaction.")
+    # Spiral assets live in an inert template until the first click. Only the
+    # untransformed source may be requested by the initial profile picture.
+    profile_template = re.search(r'<template\s+data-spiral-portrait>(.*?)</template>', home_text, re.S)
+    if not profile_template or 'profile-spiral.webp' not in profile_template.group(1):
+        errors.append("The spiral portrait must be deferred in its template.")
+    initial_home = re.sub(r'<template\b[^>]*>.*?</template>', '', home_text, flags=re.S)
+    initial_pictures = re.findall(r'<picture\b[^>]*>(.*?)</picture>', initial_home, re.S)
+    if len(initial_pictures) != 1 or 'profile-source.webp' not in initial_pictures[0] or 'profile-spiral' in initial_pictures[0]:
+        errors.append("The initial profile must show only the untransformed source picture.")
+    if 'twist to travel' not in initial_home:
+        errors.append("The initial button must invite the visitor to transform the picture.")
     for name, limit in {
         "images/profile-spiral.webp": 100_000,
+        "images/profile-source.webp": 100_000,
         "assets/js/profile-travel.js": 5_000,
         "assets/media/profile-journey.mp4": 1_000_000,
     }.items():
