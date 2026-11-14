@@ -24,7 +24,7 @@ The working folder on this Mac is `/Users/Burninghorn/AcademicWebsite`. In Finde
 | CV | `files/CV_JialinLi.pdf` |
 | Privacy text | `_pages/terms.md` |
 
-Biography and teaching are Markdown. Paper entries are YAML: preserve indentation with spaces. Each paper has `title`, `authors`, `url`, and optional `journal`, `details`, `status`, `video`, `note`, and `abstract`. Reorder the groups or entries to change their display order. Notes and abstracts support Markdown links. An `abstract` appears beneath its paper in a collapsible block, closed by default. Keep the existing filenames when replacing PDFs or the portrait.
+Biography and teaching are Markdown. Paper entries are YAML: preserve indentation with spaces. Each paper has `title`, `authors`, `url`, and optional `url_label`, `latest_version`, `journal`, `details`, `status`, `video`, `note`, and `abstract`. Use `url_label` to customize the default “Paper” link text and `latest_version` for a local PDF path, such as `/files/Nonnegativity_Shapes_Uncertainty.pdf`. Reorder the groups or entries to change their display order. Notes and abstracts support Markdown links. An `abstract` appears beneath its paper in a collapsible block, closed by default. Keep the existing filenames when replacing PDFs or the portrait.
 
 The profile initially shows a 384-square crop of the cleaned, untransformed source photo. Its crop aligns the face position with the spiral portrait. The first click on “twist to travel” loads and fades in the spiral still, then changes the label to “travel into the picture.” The fade is disabled for reduced motion. The spiral assets stay inside an inert HTML template until that first click.
 
@@ -81,7 +81,7 @@ Stage the specific files you actually edited. GitHub runs the website checks and
 
 `_config.yml` is the public configuration, so ordinary GitHub Pages builds use the correct domain and indexing settings. `_config.dev.yml` disables tracking and indexing for local previews.
 
-Production builds require `JEKYLL_ENV=production` (set by the build script and GitHub workflow). They include the existing Google Analytics measurement ID `G-7WWRGCV8XR`, existing Search Console verification tags, canonical URLs, Open Graph and Twitter metadata, and portrait icons. The homepage and Teaching page allow indexing; utility/redirect pages request no indexing. `sitemap.xml` includes the two academic pages and the CV PDF. The privacy page describes the active environment and never records its own visits.
+Production builds require `JEKYLL_ENV=production` (set by the build script and GitHub workflow). They include the existing Google Analytics measurement ID `G-7WWRGCV8XR`, existing Search Console verification tags, canonical URLs, Open Graph and Twitter metadata, and portrait icons. The homepage and Teaching page allow indexing; utility/redirect pages request no indexing. `sitemap.xml` includes the two academic pages, the CV PDF, and the latest paper PDF. The privacy page describes the active environment and never records its own visits.
 
 Google Search updates happen after crawling. In the existing Search Console property, submit `https://jia-lin-li.github.io/sitemap.xml` and request indexing of the homepage and Teaching page with URL Inspection. Confirm actual Analytics visits in the existing property's Realtime report. Having tags configured does not by itself prove Google has indexed the new content or received Analytics events.
 

@@ -52,9 +52,10 @@ layout: default
         {% if paper.status or paper.journal or paper.details %}
         <p class="venue">{% if paper.status %}<span class="status">{{ paper.status }}</span>{% if paper.journal %}<span class="separator"> / </span>{% endif %}{% endif %}{% if paper.journal %}<em>{{ paper.journal }}</em>{% endif %} {{ paper.details }}</p>
         {% endif %}
-        {% if paper.url or paper.video %}
+        {% if paper.url or paper.latest_version or paper.video %}
         <div class="paper-actions">
-          {% if paper.url %}<a href="{{ paper.url }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}
+          {% if paper.url %}<a href="{{ paper.url }}">{{ paper.url_label | default: 'Paper' | escape }} <span aria-hidden="true">↗</span></a>{% endif %}
+          {% if paper.latest_version %}<a href="{{ paper.latest_version | relative_url }}">latest version <span aria-hidden="true">↗</span></a>{% endif %}
           {% if paper.video %}<a href="{{ paper.video }}"><span aria-hidden="true">▷</span> Overview video <span aria-hidden="true">↗</span></a>{% endif %}
         </div>
         {% endif %}
